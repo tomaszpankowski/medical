@@ -63,24 +63,24 @@ class ContactForm extends Component {
         && this.state.formData.phoneNumber.length!==0
         && this.state.formData.messageText.length!==0){
             let formData = contactFormApi.getFormData(this.state.formData,cookieApi.getCookie("msgcount"));
-            contactFormApi.sendData(this.props.backNav,formData,cookieApi.getCookie,APP_LINKS.messages);
+            contactFormApi.sendData(this.props.backNav,formData,cookieApi.setCookie,APP_LINKS.messages);
             this.clearForm();
         }
     }
 
     clearForm(){
-        this.setState({ formData: contactFormApi.clearData() });      
+        this.setState({ formData: contactFormApi.clearData() });       
     }
 
     render() {
         return (
-            <Container fluid className={"contact-s2 align-items-center px-0 py-5 border-top border-info d-flex minh-50vh " + this.props.classExt}>
+            <Container fluid className={"contact-s2 align-items-center p-0 py-5  border-top border-info d-flex minh-50vh " + this.props.classExt}>
                 <Row className="mx-auto text-center w-100">
                     <Col xs={11} md={6} className="mx-auto p-0 d-flex align-items-center">
-                        <Form className="text-start w-100 border border-white p-4 rounded bg-info shadow text-white opacity-9 fw-bold text-shadow"
+                        <Form className="text-start w-100 border border-light p-4 rounded bg-info opacity-9 shadow text-light fw-bold"
                             autoComplete="off"
                             method="POST">
-                            <div className="border-bottom border-white mb-4">
+                            <div className="border-bottom border-light mb-4">
                                 <p className="font-weight-bold mb-1">
                                     Contact online
                                 </p>
@@ -89,7 +89,7 @@ class ContactForm extends Component {
                                 <Form.Label>First Name</Form.Label>
                                 <Form.Control type="text"
                                     placeholder="Enter first name"
-                                    className="rounded-pill border-white text-secondary"
+                                    className="rounded-pill border-light opacity-8"
                                     maxLength="50"
                                     name="firstName"
                                     onChange={this.updateFormData.bind(this)} 
@@ -100,7 +100,7 @@ class ContactForm extends Component {
                                 <Form.Label>Last Name</Form.Label>
                                 <Form.Control type="text"
                                     placeholder="Enter last name"
-                                    className="rounded-pill border-white text-secondary"
+                                    className="rounded-pill border-light opacity-8"
                                     maxLength="50"
                                     name="lastName"
                                     onChange={this.updateFormData.bind(this)} 
@@ -111,7 +111,7 @@ class ContactForm extends Component {
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control type="email"
                                     placeholder="Enter email"
-                                    className="rounded-pill border-white text-secondary"
+                                    className="rounded-pill border-light opacity-8"
                                     maxLength="50"
                                     name="emailAddress"
                                     onChange={this.updateFormData.bind(this)} 
@@ -122,7 +122,7 @@ class ContactForm extends Component {
                                 <Form.Label>Phone</Form.Label>
                                 <Form.Control type="tel"
                                     placeholder="Enter phone"
-                                    className="rounded-pill border-white text-secondary"
+                                    className="rounded-pill border-light opacity-8"
                                     maxLength="15"
                                     name="phoneNumber"
                                     onChange={this.updateFormData.bind(this)} 
@@ -133,7 +133,7 @@ class ContactForm extends Component {
                                 <Form.Label>Message</Form.Label>
                                 <Form.Control as="textarea"
                                     rows={4}
-                                    className="text-secondary border-white"
+                                    className="border-light opacity-8"
                                     maxLength="250"
                                     name="messageText"
                                     onChange={this.updateFormData.bind(this)} 
@@ -144,12 +144,12 @@ class ContactForm extends Component {
                                 <Button variant="outline-light"
                                     type="reset"
                                     onClick={this.clearForm.bind(this)}
-                                    className="mx-1 rounded-pill">
+                                    className="mx-1 rounded-pill border-light text-light">
                                     Clear
                                 </Button>
                                 <Button
                                     variant="outline-light"
-                                    className="mx-1 rounded-pill"
+                                    className="mx-1 rounded-pill border-light text-light"
                                     onClick={this.sendForm.bind(this)}>
                                     Send
                                 </Button>
