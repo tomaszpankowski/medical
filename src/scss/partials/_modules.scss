@@ -1,11 +1,37 @@
 @include aoa-bg-series($bg__init,$classes_init);
+@media all and (orientation: portrait){
+    .about{
+        &-s1{
+            background-position-x: right!important;
+        }
+        &-s2{
+            background-position-x: left!important
+        }
+    }
+    .contact,.index,.news{
+        &-s1{
+            background-position-x: center!important;
+        }
+    }
+}
 
+.about{
+    &-s2{
+        background-position-x: right!important;
+    }
+}
 .text{
     &-shadow{
         text-shadow: $text__shadow;
     }
 }
+h1,h2,h3,h4,h5,h6,.nav-link{
+    font-family: "Quicksand";
 
+}
+header{
+    z-index: 10;
+}
 nav{
     z-index: 10;
 }

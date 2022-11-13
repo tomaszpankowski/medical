@@ -8,7 +8,7 @@ class Footer extends Component{
     render(){
         return(      
             <footer>
-               <Container fluid className="d-flex text-dark align-items-center bg-primary text-white pt-3 opacity-9 border-top border-info">
+               <Container fluid className="d-flex align-items-center bg-primary text-white pt-3 opacity-9 border-top border-info text-shadow">
                     <Row className="mx-0 w-100 small opacity-9">
                         <Col xs={12} md={6} lg={5} className="text-center text-md-start">
                             <img src="img/navbar_logo.png" className="fluid" alt="logo"/>
@@ -41,7 +41,7 @@ class Footer extends Component{
                         <Col xs={12} className="text-center border-top">
                             <p className="mb-1">
                                 Copyright &copy; 2021-2022 Tomasz Pankowski. 
-                                <Link to="privacy.html" className="fw-bold text-white text-decoration-none">
+                                <Link to="/privacy" className="fw-bold text-white text-decoration-none">
                                     Privacy policy
                                 </Link>
                             </p>
