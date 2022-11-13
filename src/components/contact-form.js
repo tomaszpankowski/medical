@@ -77,7 +77,7 @@ class ContactForm extends Component {
             <Container fluid className={"contact-s2 align-items-center p-0 py-5  border-top border-info d-flex minh-50vh " + this.props.classExt}>
                 <Row className="mx-auto text-center w-100">
                     <Col xs={11} md={6} className="mx-auto p-0 d-flex align-items-center">
-                        <Form className="text-start w-100 border border-light p-4 rounded bg-info opacity-9 shadow text-light fw-bold"
+                        <Form className="text-start w-100 border border-light p-4 rounded bg-primary opacity-9 shadow text-light fw-bold"
                             autoComplete="off"
                             method="POST">
                             <div className="border-bottom border-light mb-4">
@@ -141,15 +141,15 @@ class ContactForm extends Component {
                                     required/>
                             </Form.Group>
                             <div className="w-100 text-end mt-3">
-                                <Button variant="outline-light"
+                                <Button variant="light"
                                     type="reset"
                                     onClick={this.clearForm.bind(this)}
-                                    className="mx-1 rounded-pill border-light text-light">
+                                    className="mx-1 rounded-pill">
                                     Clear
                                 </Button>
                                 <Button
-                                    variant="outline-light"
-                                    className="mx-1 rounded-pill border-light text-light"
+                                    variant="light"
+                                    className="mx-1 rounded-pill"
                                     onClick={this.sendForm.bind(this)}>
                                     Send
                                 </Button>

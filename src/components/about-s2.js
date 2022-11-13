@@ -8,10 +8,10 @@ class AboutS2 extends Component{
         return(    
             <Container fluid className="about-s2 d-flex bg-secondary minh-50vh align-items-center py-5 border-top border-info">
                 <Row className="mx-0 w-100">
-                    <Col xs={12} md={7} className="minh-25vh d-none d-md-block"></Col>
-                    <Col xs={12} md={5} className="minh-50vh d-flex align-items-center">
+                    <Col xs={12} md={8} className="minh-25vh d-none d-md-block"></Col>
+                    <Col xs={12} md={4} className="minh-50vh d-flex align-items-center">
                         <div className="w-100 text-center text-md-start pt-5">
-                            <h5 className="text-white">
+                            <h5 className="text-white fst-italic">
                                 Lorem ipsum
                             </h5>
                             <h2 className="dispaly-6 fw-bold text-info text-shadow">
